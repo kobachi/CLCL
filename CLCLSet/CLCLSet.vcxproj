@@ -150,7 +150,8 @@
       <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup> Include="..\Bitmap.c" />
+  <ItemGroup>
+    <ClCompile Include="..\Bitmap.c" />
     <ClCompile Include="..\ClipBoard.c" />
     <ClCompile Include="..\DarkMode.c" />
     <ClCompile Include="..\Data.c" />
