@@ -708,7 +708,7 @@ static void dark_mode_set_header(const HWND hHeader)
  */
 static void dark_mode_set_tooltip(const HWND hToolTip)
 {
-	const HANDLE mode = (HANDLE)((dark_mode_dark == TRUE) ? 1 : 2);
+	const HANDLE mode = (HANDLE)(INT_PTR)((dark_mode_dark == TRUE) ? 1 : 2);
 
 	// 表示の度に呼ばれるため配色が変わっていない場合は何もしない
 	if (hToolTip == NULL || GetProp(hToolTip, DARK_MODE_PROP) == mode) {

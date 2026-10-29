@@ -157,7 +157,7 @@ HWND container_create(const HINSTANCE hInstance, const HWND pWnd, int id)
 	hWnd = CreateWindow(WINDOW_CLASS,
 		TEXT(""),
 		WS_CHILD | WS_VISIBLE | WS_TABSTOP,
-		0, 0, 0, 0, pWnd, (HMENU)id, hInstance, NULL);
+		0, 0, 0, 0, pWnd, (HMENU)(INT_PTR)id, hInstance, NULL);
 	return hWnd;
 }
 /* End of source */

@@ -765,7 +765,7 @@ HWND bmpview_create(const HINSTANCE hInstance, const HWND pWnd, int id)
 	hWnd = CreateWindowEx(WS_EX_CLIENTEDGE, WINDOW_CLASS,
 		TEXT(""),
 		WS_TABSTOP | WS_CHILD | WS_VISIBLE | WS_HSCROLL | WS_VSCROLL,
-		0, 0, 0, 0, pWnd, (HMENU)id, hInstance, NULL);
+		0, 0, 0, 0, pWnd, (HMENU)(INT_PTR)id, hInstance, NULL);
 	return hWnd;
 }
 /* End of source */

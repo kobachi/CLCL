@@ -78,7 +78,7 @@ HWND treeview_create(const HINSTANCE hInstance, const HWND hWnd, const int id, c
 	hTreeView = CreateWindowEx(WS_EX_NOPARENTNOTIFY | WS_EX_CLIENTEDGE,
 		WC_TREEVIEW, NULL, WS_VISIBLE | WS_CHILD | WS_TABSTOP |
 		TVS_HASLINES | TVS_SHOWSELALWAYS | TVS_HASBUTTONS | TVS_LINESATROOT | TVS_EDITLABELS,
-		0, 0, Scale(option.viewer_sep_size), 100, hWnd, (HMENU)id, hInstance, NULL);
+		0, 0, Scale(option.viewer_sep_size), 100, hWnd, (HMENU)(INT_PTR)id, hInstance, NULL);
 	if (hTreeView == NULL) {
 		return NULL;
 	}
