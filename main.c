@@ -378,7 +378,7 @@ BOOL _SetForegroundWindow(const HWND hWnd)
 
 	ret = SetForegroundWindow(hWnd);
 
-	SystemParametersInfo(SPI_SETFOREGROUNDLOCKTIMEOUT, 0, (PVOID)nTimeout, 0);
+	SystemParametersInfo(SPI_SETFOREGROUNDLOCKTIMEOUT, 0, (PVOID)(INT_PTR)nTimeout, 0);
 
 	AttachThreadInput(nTargetID, nForegroundID, FALSE);
 	return ret;

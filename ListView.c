@@ -69,7 +69,7 @@ HWND listview_create(const HINSTANCE hInstance, const HWND hWnd, const int id, c
 	hListView = CreateWindowEx(WS_EX_NOPARENTNOTIFY | WS_EX_CLIENTEDGE,
 		WC_LISTVIEW, NULL, WS_TABSTOP | WS_CHILD |
 		LVS_REPORT | LVS_AUTOARRANGE | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_EDITLABELS,
-		0, 0, 500, 500, hWnd, (HMENU)id, hInstance, NULL);
+		0, 0, 500, 500, hWnd, (HMENU)(INT_PTR)id, hInstance, NULL);
 	if (hListView == NULL) {
 		return NULL;
 	}
